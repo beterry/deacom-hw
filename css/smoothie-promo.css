@@ -1,0 +1,124 @@
+#smoothie-promo{
+    margin: 2rem 3rem;
+    border-radius: .25rem;
+    padding: 0 2rem;
+}
+
+.smoothie-promo__inner{
+    display: flex;
+    justify-content: space-between;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.smoothie-promo__left{
+    padding: 3rem 0;
+}
+
+.smoothie-promo__left h4{
+    font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+    color: purple;
+    margin:  0 0 .5rem 0;
+}
+
+.smoothie-promo__left h3{
+    font-size: 2.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.smoothie-promo__right{
+    position: relative;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.smoothie-promo__right img{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 650px){
+    #smoothie-promo{
+        margin: 2rem 2rem;
+        border-radius: .25rem;
+        padding: 0 2rem;
+    }
+    .smoothie-promo__right{
+        display: none;
+    }
+    .smoothie-promo__left h3{
+        font-size: 2rem;
+    }
+}
+
+/* --------FLAVOR STYLING-------- */
+
+#smoothie-promo__flavors{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#flavor-txt{
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0 0 0 .5rem;
+    line-height: 1;
+}
+
+#flavor-txt.yellow{
+    color: #F88A12;
+}
+
+.smoothie-flavor{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.flavor-color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.flavor-color.yellow{
+    background: #FBC80E;
+}
+
+.flavor-color.red{
+    background: #E22F13;
+}
+
+.flavor-color.green{
+    background: #85C400;
+}
+
+/* ----------FLAVOR SELECTOR STYLES----------- */
+
+.smoothie-flavor.active{
+    border: 1px solid purple;
+}
+
+.smoothie-flavor:hover{
+    background: rgba(128, 0, 128, .2);
+}
