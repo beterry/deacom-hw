@@ -1,6 +1,6 @@
 # Interview Challenge: Debug and enhance an incomplete landing page
 
-Check out the demo [here](https://beterry.github.io/deacom-challenge/)
+Check out the demo [here](https://beterry.github.io/deacom-hw/)
 
 As part of an interview process for a Web Developer position, I was given this challenge to test my problem solving and development skills. In this README, I’ll explain my debugging process and my decisions about designing and coding an interactive component.
 
@@ -76,7 +76,7 @@ My second challenge was to debug the navigation bar. The instructions noted that
 
 I’ve built many expandable menus in the past and knew that the bug was most likely a mistake with absolute positioning or an incorrect selector in `style.css`.
 
-On further inspection, I confirmed that the absolute positioning was correct; however, I could not find a `:hover` pseudo selector targeting the sub-menu. I added this selector, changing the display property of the sub-menu to `block` when the menu item is hovered. This solution was successful and created to desired functionality.
+On further inspection, I confirmed that the absolute positioning was correct; however, I could not find a `:hover` pseudo selector targeting the sub-menu. I added this selector, changing the display property of the sub-menu to `block` when the menu item is hovered. This solution was successful and created the desired functionality.
 
 ```css
 header .menu .menuOption .subMenu {
@@ -112,7 +112,7 @@ I created two files: `smoothie-promo.css` and `smoothie-promo.js`. I added this 
 </section>
 ```
 
-I also imagined that the flavors in the component would change frequently as new flavors are added or discontinued. I wanted to make my component easily editable in the future. To do this, I started by writing a `config` variable in `smoothie-promo.js` to specify all the information unique to each flavor.
+I also imagined that the flavors in the component would change frequently as new flavors are added or discontinued. I wanted to make my component easily editable in the future. To do this, I started by writing a `smoothieFlavors` variable in `smoothie-promo.js` to specify all the information unique to each flavor.
 
 My goal: have the ability to simply edit this array to add or remove a flavor in the future.
 
@@ -203,7 +203,7 @@ function initComponent()
 }
 ```
 
-The `renderComponent()` function changes the styles and image of the component based on `activeColor`. This function is called after `initComponent()` and also after the user selects a different flavor.
+The `renderComponent()` function changes the styles and image of the component based on `activeColor`. This function is called after `initComponent()` and after the user selects a different flavor.
 
 ```js
 //renders variable elements after init and on flavor change
@@ -254,6 +254,6 @@ function changeActiveFlavor(index)
 
 In the end, I was able to successfully accomplish each challenge.
 
-I enjoyed the variation of the challenge topics. I had to troubleshoot CSS, route data from an API into the DOM, and also create a component from scratch. Being able to complete all these challenges reaffirms that I have the potential to be a successful web developer.
+I enjoyed the variation of the challenge topics. I had to troubleshoot CSS, route data from an API into the DOM, and also create a component from scratch.
 
 The final component is easy to install and simple to edit. I strived to design and code a bright modern, and relevant component and I think the result accomplishes those goals.
